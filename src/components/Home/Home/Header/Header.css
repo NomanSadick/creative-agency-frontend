@@ -1,0 +1,5 @@
+.header-container{
+    background-color: #FBD062;
+    height: 95vh;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
