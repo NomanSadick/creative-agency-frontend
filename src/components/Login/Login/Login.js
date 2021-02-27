@@ -7,13 +7,15 @@ import googleLogo from '../../../images/icons/google.png'
 import logo from '../../../images/logos/logo.png'
 import firebaseConfig from './firebase.config';
 import './Login.css'
+// export const app = firebase.initializeApp(firebaseConfig);
 const Login = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     console.log(loggedInUser);
     const history = useHistory();
     const location = useLocation();
-  
+   
     let { from } = location.state || { from: { pathname: "/" } };
+  
     if (firebase.apps.length === 0) {
         firebase.initializeApp(firebaseConfig);
     }
@@ -23,8 +25,8 @@ const handleGoogleSignIn = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider)
             .then((result) => {
-                const { displayName, email } = result.user;
-                const signedInUser = { name: displayName, email }
+                const { displayName, email, photoURL } = result.user;
+                const signedInUser = { name: displayName, email, image: photoURL };
                 setLoggedInUser([loggedInUser,signedInUser]);
             
                 history.replace(from);

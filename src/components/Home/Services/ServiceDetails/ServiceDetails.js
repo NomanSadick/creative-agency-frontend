@@ -5,12 +5,13 @@ import './ServiceDetails.css'
 const ServiceDetails = ({ service }) => {
     const history = useHistory()
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
     const handleCardSubmit = (data) => {
         const newCard = {...data}
         setLoggedInUser(newCard)
         history.push("/order")
     }
-    // console.log(loggedInUser);
+    console.log(loggedInUser);
     return (
         <div className="col-md-4 service-card" onClick={()=> handleCardSubmit(service)}>
             <div className="d-flex flex-column justify-content-center align-items-center py-4 my-2">

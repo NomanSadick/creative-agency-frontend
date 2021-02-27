@@ -1,18 +1,17 @@
-import React from 'react';
+import React, { } from 'react';
+
 
 const FeedbackDetails = ({ client }) => {
+    // const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
-        <div className="card shadow-sm">
-            <div className="card-header d-flex align-items-center">
-                <img className="mx-3" src={client.clientImg} alt="" width="60"/>
-                <div>
-                    <h6>{client.clientName}</h6>
-                    <h6>{client.title}</h6>
-                </div>
+        <div className="shadow-sm col-md-3  ml-5 mb-5 px-5">
+            <div className="d-flex align-items-center">
+                <img style={{ height:'50px'}} className="mx-3 rounded-circle" src={client.photoURL} alt="" width="60" />
+                <h6>{client.name}</h6>
             </div>
-            <div className="card-body">
 
-                <p className="card-text text-secondary mt-4">{client.description}</p>
+            <div>
+                <p className=" text-secondary mt-4 d-flex justify-content-start pr-5">{client.projectDetails}</p>
             </div>
         </div>
     );
