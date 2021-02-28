@@ -29,6 +29,7 @@ const Services = () => {
             .then(res => res.json())
             .then(data => setService(data))
     }, [])
+    console.log(service);
     return (
         <section className="container">
             <h1 className='text-center font-weight-bold py-4 mb-4'>Provide awesome <span className="text-success">services</span></h1>
