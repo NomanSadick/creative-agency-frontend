@@ -24,9 +24,10 @@ const Order = () => {
         formData.append('email', loggedInUser.email)
         formData.append('title', loggedInUser.title)
         formData.append('name', loggedInUser.name)
-        formData.append('img', loggedInUser[0].img)
+        formData.append('img', loggedInUser[0].file.data)
         formData.append('description', loggedInUser.description)   
         formData.append('price', loggedInUser.price)
+        formData.append('status', 'pending')
     
         console.log(loggedInUser,"this is all data");
     
