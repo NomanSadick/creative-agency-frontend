@@ -31,7 +31,7 @@ const Order = () => {
     
         console.log(loggedInUser,"this is all data");
     
-        fetch('http://localhost:5000/order', {
+        fetch('https://shrouded-fortress-62693.herokuapp.com/order', {
           method: 'POST',
           body: formData
         })

@@ -11,7 +11,7 @@ const Slidebar = () => {
     const [isAdmin, setIsAdmin] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/isAdminData?email=${loggedInUser[1]?.email}`)
+        fetch(`https://shrouded-fortress-62693.herokuapp.com/isAdminData?email=${loggedInUser[1]?.email}`)
             .then((res) => res.json())
             .then((data) => {
                 if (data.admin === true) {

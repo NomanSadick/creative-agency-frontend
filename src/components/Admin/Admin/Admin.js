@@ -7,7 +7,7 @@ const Admin = () => {
 
 
   const handleSubmit = (e) => {
-    fetch("http://localhost:5000/admin", {
+    fetch("https://shrouded-fortress-62693.herokuapp.com/admin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

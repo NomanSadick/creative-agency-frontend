@@ -32,7 +32,7 @@ import './Feedback.css'
 const Feedback = () => {
     const [feedback, setFeedback] = useState()
     useEffect(() => {
-        fetch('http://localhost:5000/feedback')
+        fetch('https://shrouded-fortress-62693.herokuapp.com/feedback')
             .then(res => res.json())
             .then(data => setFeedback(data))
     }, [])

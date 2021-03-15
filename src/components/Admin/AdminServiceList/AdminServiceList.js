@@ -5,7 +5,7 @@ import AdminServiceTable from './AdminServiceTable';
 const AdminServiceList = () => {
     const [adminServiceList, setAdminServiceList] = useState()
     useEffect(() => {
-        fetch('http://localhost:5000/adminServiceList')
+        fetch('https://shrouded-fortress-62693.herokuapp.com/adminServiceList')
             .then(res => res.json())
             .then(data => setAdminServiceList(data))
     }, [])

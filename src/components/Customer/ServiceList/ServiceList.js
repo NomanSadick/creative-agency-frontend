@@ -11,7 +11,7 @@ const ServiceList = () => {
     const [status, setStatus] = useState()
 
     useEffect(() => {
-        fetch('http://localhost:5000/serviceStatus')
+        fetch('https://shrouded-fortress-62693.herokuapp.com/serviceStatus')
             .then(res => res.json())
             .then(data => setStatus(data))
     }, [])

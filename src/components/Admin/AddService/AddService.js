@@ -26,7 +26,7 @@ const AddService = () => {
     
         console.log(loggedInUser,"this is all data");
     
-        fetch('http://localhost:5000/addService', {
+        fetch('https://shrouded-fortress-62693.herokuapp.com/addService', {
           method: 'POST',
           body: formData
         })

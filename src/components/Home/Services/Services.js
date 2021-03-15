@@ -25,7 +25,7 @@ import ServiceDetails from './ServiceDetails/ServiceDetails';
 const Services = () => {
     const [service, setService] = useState()
     useEffect(() => {
-        fetch('http://localhost:5000/allData')
+        fetch('https://shrouded-fortress-62693.herokuapp.com/allData')
             .then(res => res.json())
             .then(data => setService(data))
     }, [])

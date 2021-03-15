@@ -16,7 +16,7 @@ const Review = () => {
     const onSubmit = data => {
        data.photoURL = loggedInUser[1].image;
         
-        fetch('http://localhost:5000/addReview', {
+        fetch('https://shrouded-fortress-62693.herokuapp.com/addReview', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)
